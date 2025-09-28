@@ -1,0 +1,209 @@
+/* ===== variables ===== */
+$brand: #245e62;
+$accent: #d6bf5e;
+$text: #2f3a3a;
+$bg: #f9f7f1;
+
+/* ===== base ===== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: $text;
+  background: $bg;
+  font-family: "Noto Serif JP", system-ui, noto-serif;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ===== layout helpers ===== */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 72px 0; }
+
+/* ===== header ===== */
+.site-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: $bg;
+
+  .logo {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $brand;
+    margin: 0;
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    z-index: 200;
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #333;
+      margin-bottom: 4px;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+      }
+    }
+    &.is-open {
+      display: block;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: $bg;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      z-index: 100;
+      ul {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  }
+}
+
+/* ===== hero ===== */
+.hero {
+  position: relative;
+  padding: 4rem 0;
+  width: 100%;
+  overflow: visible;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 10rem;
+    height: 90px;
+    z-index: 0;
+    background: url("../imgs/bg-line.png") repeat-x center / auto 90px;
+    opacity: 1;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .hero-copy {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+  }
+
+  .hero-tagline {
+    font-weight: 700;
+    line-height: 1.4;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    margin: 0;
+  }
+
+  .hero-visual {
+    flex: 0 0 280px;
+    width: 280px;
+    max-width: 100%;
+    transition: flex-basis 0.5s, width 0.5s;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+/* ===== animation ===== */
+.animate-title {
+  transform: scale(5);
+  opacity: 0;
+  animation: titlePop 6s ease-out forwards;
+}
+@keyframes titlePop {
+  0% {
+    transform: scale(5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-nav {
+  opacity: 0;
+  animation: navFadeIn 0.8s ease-out forwards;
+  animation-delay: 6s;
+}
+@keyframes navFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== responsive ===== */
+@media (max-width: 768px) {
+  .hero {
+    .hero-inner {
+      flex-direction: column;
+      text-align: left;
+    }
+    .hero-visual {
+      flex-basis: auto;
+      width: 66%;
+      transition: flex-basis 0.5s, width 0.5s;
+    }
+    &::before {
+      top: 4rem;
+      height: 72px;
+      background-size: auto 72px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    .hamburger { display: inline-grid; }
+    .site-nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: $bg;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      z-index: 100;
+      ul {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+    .site-nav.is-open {
+      display: block;
+    }
+  }
+}
