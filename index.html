@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body id="top">
 
   <header class="site-header">
     <h1 class="logo animate-title">Emojaponnaise</h1>
@@ -27,9 +27,9 @@
     </button>
     <nav id="site-menu" class="site-nav animate-nav">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Works</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -49,10 +49,62 @@
       </div>
     </section>
 
-    <section class="about">
-      <h2>About</h2>
-      <p>ここに自己紹介テキストが入ります。</p>
-    </section>
+    <section id="about" class="about">
+      <div class="about__inner">
+        <!--ヘッダー（見出し＋トップへ戻るボタン-->
+        <div class="about__head">
+          <h2 class="about__title">About</h2>
+          <a href="#top" class="about__to-top" aria-label="ページ先頭へ">
+          <img src="assets/imgs/owl-button.png" alt="フクロウのボタン" loading="lazy" width="120" height="120"></a>
+        </div><!-- /.about__head -->
+
+        <!--プロフィール-->
+          <div class="about__profile profile">
+            <div class="profile__img">
+              <img src="assets/imgs/about-avatar.png" alt="kaori  ota プロフィール画像" loading="lazy" width="160" height="160">
+            </div>
+            <div class="profile__info">
+              <h3 class="profile__name">Kaori Ota</h3>
+              <p class="profile_desc">人や企業の『伝えたい・学びたい』を支える伴走クリエイターです。<br>営業・制作補助・顧客対応など多様な現場で、相手の想いを引き出し<br>成果につなげる力を磨いてきました。<br>現在は Web制作・デザイン・Canva・GAS などのツールを活かし<br>わかりやすく想いを伝える仕組みづくりに取り組んでいます。</p>
+            </div>
+          </div><!-- /.about__profile -->
+         
+          <!--ストレングスファインダーの画像＋スキルセット-->
+            <div class="about__content">
+              <section
+               class="about__strength strength">
+                <h3 class="about__subtitle">Strength</h3>
+                <img src="assets/imgs/about-strengthimg.png" alt="ストレングスファインダーの画像"  loading="lazy" width="360" height="280">
+              </section>
+              
+              <section   class="about__skill skills">
+                <h3 class="skills__subtitle">Skills</h3> 
+                <ul class="skills__list">
+                  <li class="skills__item">HTML</li>
+                  <li class="skills__item">CSS</li>
+                  <li class="skills__item">JavaScript</li>
+                  <li class="skills__item">WordPress</li>
+                  <li class="skills__item">Figma</li>
+                </ul>
+            
+              
+                <ul class="skills__list" >
+                  <li class="skills__item">Canva</li>
+                  <li class="skills__item">Illustrator</li>
+                  <li class="skills__item">Photoshop</li>
+                  <li class="skills__item">Google Workspace</li>
+                  </ul> 
+            </section>
+          </div>
+      <!-- /.about__inner -->
+
+    <!--cta-->
+    <div class="about__cta">
+     <a href="#contact" class="btn btn--contact" aria-label="お問い合わせへ移動">Contact</a>
+    </div>
+ </div>
+  <!-- /.about__inner -->
+</section>
   </main>
 
   <footer>
