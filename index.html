@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
-<body id="top">
+<body class="top-page" id="top">
 
   <header class="site-header">
     <h1 class="logo animate-title">Emojaponnaise</h1>
@@ -35,6 +35,7 @@
   </header>
  
   <main>
+    <!--hero-->
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-copy">
@@ -49,13 +50,14 @@
       </div>
     </section>
 
+  
     <section id="about" class="about">
       <div class="about__inner">
         <!--ヘッダー（見出し＋トップへ戻るボタン-->
         <div class="about__header">
           <h2 class="about__title">About</h2>
-          <a href="#top" class="about__to-top" aria-label="ページ先頭へ">
-          <img src="assets/imgs/owl-button.png" alt="" loading="lazy" width="120" height="120"></a>
+          <!--<a href="#top" class="about__to-top" aria-label="ページ先頭へ">
+          <img src="assets/imgs/owl-button.png" alt="" loading="lazy" width="120" height="120"></a>-->
         </div><!-- /.about__header -->
 
         <!--プロフィール-->
@@ -112,8 +114,8 @@
         <!--ヘッダー（見出し＋トップへ戻るボタン-->
         <div class="works__header">
           <h2 class="works__title">Works</h2>
-          <a href="#top" class="works__to-top" aria-label="ページ先頭へ">
-          <img src="assets/imgs/owl-button.png" alt="" loading="lazy" width="120" height="120"></a>
+          <!--<a href="#top" class="works__to-top" aria-label="ページ先頭へ">
+          <img src="assets/imgs/owl-button.png" alt="" loading="lazy" width="120" height="120"></a>-->
         </div><!-- /.works__header -->
 <!-- Worksセクション -->
 <section class="belt" aria-label="作品が横に流れるギャラリー">
@@ -148,11 +150,116 @@
 </footer>
 </section>
 
-</main>
+<!--Serviceセクション -->
+ <section class="service">
+  <div class="service__inner">
+      <!--ヘッダー（見出し＋トップへ戻るボタン-->
+        <div class="service__header">
+          <h2 class="service__title">Service</h2>
+          <!--<a href="#top" class="service__to-top" aria-label="ページ先頭へ">
+          <img src="assets/imgs/owl-button.png" alt="" loading="lazy" width="120" height="120"></a>-->
+        </div><!-- /.service__header -->
+   
 
+    <div class="cards">
+      <article class="card">
+        <h3 class="card__tag">デザイン</h3>
+        <img src="/assets/imgs/service-img01.png" alt="" class="card__img">
+        <h4 class="card__title">想いを形にする設計</h4>
+        <p class="card__text">想いをカタチにし、感情を伝えるデザイン作りを心がけています
+あなたの内側にあるビジョンやメッセージを丁寧にすくい上げ見る人の心に届く形に仕立てます。</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__tag">コーディング</h3>
+        <img src="/assets/imgs/service-img02.png" alt="" class="card__img">
+        <h4 class="card__title">軽量・保守性の高い実装</h4>
+        <p class="card__text">ユーザビリティとSEO対策を重視し、訪問者の視線を意識したWEBサイトのデザインからコーディングまでを構築します。</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__tag">オンライン伴走</h3>
+        <img src="/assets/imgs/service-img03.png" alt="" class="card__img">
+        <h4 class="card__title">続けられる仕組みづくり</h4>
+        <p class="card__text">オンライン秘書として、バックオフィスのサポートもお任せください。さらに、各種ソフトの使い方講習で、あなたのスキルアップをお手伝いします。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!--Contactセクション --></main>
+ <section id="contact" class="contact">
+      <div class="contact__inner">
+        <!--ヘッダー（見出し＋トップへ戻るボタン-->
+        <div class="contact__header">
+          <h2 class="contact__title">Contact</h2>
+          <!--<a href="#top" class="contact__to-top" aria-label="ページ先頭へ">
+          <img src="assets/imgs/owl-button.png" alt="" loading="lazy" width="120" height="120"></a>-->
+        </div><!-- /.contact__header -->
+
+        <p class="contact__text">ご質問・ご相談など、お気軽にお問い合わせください。<br>2営業日以内に返信いたします。</p>
+
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfD5m3bX4Y9kHjv1n0fO8KX9Jt8c8y7z3x7fQe5X9Zz5kWfQ/formResponse" method="POST" class="contact-form" target="_blank" novalidate>
+          <div class="contact-form__group">
+            <label for="name" class="contact-form__label">お名前<span class="required"></span></label>
+            <input type="text" id="name" name="entry.2005620554" class="contact-form__input" required>
+          </div>
+          <div class="contact-form__group">
+            <label for="email" class="contact-form__label">E-mailアドレス <span class="required"></span></label>
+            <input type="email" id="email" name="entry.1045781291" class="contact-form__input" required>
+          </div>
+          <div class="contact-form__group">
+            <label for="message" class="contact-form__label">お問い合わせ内容<span class="required"></span></label>
+            <textarea id="message" name="entry.839337160" class="contact-form__textarea" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--submit">submit</button>
+        </form>
+      </div>
+    </section>
+<script>
+(() => {
+  const btn  = document.querySelector('.back-to-top');
+  const hero = document.querySelector('.hero');
+
+  if (!btn) return; // ボタンが無ければ何もしない
+
+  // Heroが無いページ（下層など）は最初から表示
+  if (!hero) {
+    btn.classList.add('is-visible');
+    return;
+  }
+
+  // Heroが画面に映っている間は非表示、見えなくなったら表示
+  const io = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        // Heroが見えてる → 隠す
+        btn.classList.remove('is-visible');
+      } else {
+        // Heroが見えなくなった → 出す
+        btn.classList.add('is-visible');
+      }
+    },
+    {
+      root: null,          // ビューポート
+      threshold: 0,        // 1pxでも見えてたら「見えてる」と判定
+      rootMargin: '0px'    // 固定ヘッダーがあるなら例えば '-80px 0px 0px 0px'
+    }
+  );
+
+  io.observe(hero);
+})();
+</script>
+
+    <!--トップへ戻るボタン-->
+<a href="#top" class="back-to-top" aria-label="ページ先頭へ戻る">
+  <img src="assets/imgs/owl-button.png" alt="" width="48" height="48" decoding="async">
+</a>
+</body>
   <footer>       
     <p>&copy; Kao 2025</p>
   </footer>
 
-</body>
+
 </html>
