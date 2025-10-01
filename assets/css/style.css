@@ -91,7 +91,6 @@ html {
 @supports (padding: max(0px)) {
   .back-to-top {
     right: max(12px, env(safe-area-inset-right));
-    top: max(12px, env(safe-area-inset-bottom));
   }
 }
 /* 低モーション希望の人へは静かに */
@@ -104,18 +103,16 @@ html {
   }
 }
 /* 初期は非表示にしておく */
-.back-to-top {
+/* .back-to-top{
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
+  transition: opacity .25s ease;
 }
-
-/* Heroを通過したら（＝クラスが付いたら）表示 */
-.back-to-top.is-visible {
+/* Heroを通過したら（＝クラスが付いたら）表示 
   opacity: 1;
   pointer-events: auto;
-}
 
+} */
 /* ===== header ===== */
 .site-header {
   position: relative;
@@ -502,7 +499,7 @@ html {
 
 .about__cta {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 2rem;
   margin-bottom: 6rem;
   padding-right: 80px;

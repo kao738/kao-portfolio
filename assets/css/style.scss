@@ -65,7 +65,7 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
 @supports (padding: max(0px)) {
   .back-to-top{
     right: max(12px, env(safe-area-inset-right));
-    top: max(12px, env(safe-area-inset-bottom));
+    // top: max(12px, env(safe-area-inset-bottom));
   }
 }
 
@@ -76,17 +76,16 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
 }
 
 /* 初期は非表示にしておく */
-.back-to-top{
+ /* .back-to-top{
   opacity: 0;
   pointer-events: none;
   transition: opacity .25s ease;
 }
-/* Heroを通過したら（＝クラスが付いたら）表示 */
-.back-to-top.is-visible{
+/* Heroを通過したら（＝クラスが付いたら）表示 
   opacity: 1;
   pointer-events: auto;
-}
-
+ 
+} */
 
 
 
@@ -488,7 +487,7 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
 }
 .about__cta {
   display: flex;
-  justify-content: flex-end;  // 中の要素を右寄せ
+  justify-content: center; // 中の要素を中央寄せ
   margin-top: 2rem;
   margin-bottom: 6rem;
   padding-right: 80px;
