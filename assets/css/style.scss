@@ -87,7 +87,7 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
  
 } */
 
-
+@use "sass:color";
 
 /* ===== header ===== */
 .site-header {
@@ -596,7 +596,7 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
 
 /* セクション全体の中央寄せは内側コンテナで */
 .works__inner{ 
-  max-width: 1100px; 
+  // max-width: 1100px; 
   margin: 0 auto; 
   padding-inline: clamp(16px, 4vw, 32px);
   /* ここに .works__footer が入っていれば自然に中央ど真ん中に */
@@ -763,17 +763,17 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
   padding: 64px 16px;
   background: $bg; /* 好きな薄色 */
 }
-.service__inner {
+.cards {
   max-width: 1100px;   /* コンテンツ幅を固定 */
   margin: 0 auto;
 }
 
 /* タイトル */
-.service__title {
-  font-size: clamp(20px, 2.5vw, 28px);
-  text-align: center;
-  margin-bottom: 32px;
-}
+// .service__title {
+//   font-size: clamp(20px, 2.5vw, 28px);
+//   text-align: center;
+//   margin-bottom: 32px;
+// }
 
 /* --- ここがキモ：超シンプルなグリッド --- */
 .cards {
@@ -825,11 +825,11 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
   --max: 960px;            /* ここを好みで 840〜1000px くらいに調整 */
 }
 
-.service .service__inner{
-  width: min(var(--max), calc(100% - var(--side-pad) * 2));
-  margin-inline: auto;     /* 中央寄せ */
-  padding-inline: 0;       /* 既存の内側余白はここでリセット（必要なら残してOK） */
-}
+// .service .service__inner{
+//   width: min(var(--max), calc(100% - var(--side-pad) * 2));
+//   margin-inline: auto;     /* 中央寄せ */
+//   padding-inline: 0;       /* 既存の内側余白はここでリセット（必要なら残してOK） */
+// }
 
 
 /* --- 寿司ベルトのオーバーレイ最終形（上書き用） --- */
@@ -872,54 +872,62 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
 .belt__item:focus-within .belt__caption{
   opacity: 1;
 }
-.contact{
-  padding: 64px 16px;
-  background: $bg; /* 好きな薄色 */ 
-}
-.contact__inner {
-  max-width: 1100px;   /* コンテンツ幅を固定 */
-  margin: 0 auto;
-}
-.contact__title {
-  font-size: clamp(20px, 2.5vw, 28px);
+.contact {
+  padding: 80px 20px;
+  background: url('../img/bg-asanoha.png') repeat; // 麻の葉模様
   text-align: center;
-  margin-bottom: 32px;
+
+  &__title {
+    font-size: 2rem;
+    color: #134b4f; // 濃いめ青緑
+    margin-bottom: 1rem;
+  }
+
+  &__lead {
+    margin-bottom: 2rem;
+    font-size: .95rem;
+    opacity: .8;
+  }
 }
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+
+.c-form {
   max-width: 600px;
   margin: 0 auto;
+  display: grid;
+  gap: 20px;
+
+  label {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.6); // 半透明ホワイト
+    backdrop-filter: blur(4px);
+    font: inherit;
+
+    &:focus {
+      outline: 2px solid #6aa89b; // 薄萌葱
+      background: #fff;
+    }
+  }
+
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #ffeaa7; // 淡い黄色
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
 }
-.contact__input,
-.contact__textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: inherit;
-  resize: vertical;
-}
-.contact__input:focus,
-.contact__textarea:focus {
-  border-color: $brand;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(36, 94, 98, 0.2);
-}
-.contact__button {
-  align-self: center;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background: $brand;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.contact__button:hover {
-  background: darken($brand, 10%);
-}       

@@ -164,7 +164,7 @@
     <div class="cards">
       <article class="card">
         <h3 class="card__tag">デザイン</h3>
-        <img src="/assets/imgs/service-img01.png" alt="" class="card__img">
+        <img src="assets/imgs/service-img01.png" alt="" class="card__img">
         <h4 class="card__title">想いを形にする設計</h4>
         <p class="card__text">想いをカタチにし、感情を伝えるデザイン作りを心がけています
 あなたの内側にあるビジョンやメッセージを丁寧にすくい上げ見る人の心に届く形に仕立てます。</p>
@@ -172,14 +172,14 @@
 
       <article class="card">
         <h3 class="card__tag">コーディング</h3>
-        <img src="/assets/imgs/service-img02.png" alt="" class="card__img">
+        <img src="assets/imgs/service-img02.png" alt="" class="card__img">
         <h4 class="card__title">軽量・保守性の高い実装</h4>
         <p class="card__text">ユーザビリティとSEO対策を重視し、訪問者の視線を意識したWEBサイトのデザインからコーディングまでを構築します。</p>
       </article>
 
       <article class="card">
         <h3 class="card__tag">オンライン伴走</h3>
-        <img src="/assets/imgs/service-img03.png" alt="" class="card__img">
+        <img src="assets/imgs/service-img03.png" alt="" class="card__img">
         <h4 class="card__title">続けられる仕組みづくり</h4>
         <p class="card__text">オンライン秘書として、バックオフィスのサポートもお任せください。さらに、各種ソフトの使い方講習で、あなたのスキルアップをお手伝いします。</p>
       </article>
@@ -199,23 +199,23 @@
 
         <p class="contact__text">ご質問・ご相談など、お気軽にお問い合わせください。<br>2営業日以内に返信いたします。</p>
 
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfD5m3bX4Y9kHjv1n0fO8KX9Jt8c8y7z3x7fQe5X9Zz5kWfQ/formResponse" method="POST" class="contact-form" target="_blank" novalidate>
-          <div class="contact-form__group">
-            <label for="name" class="contact-form__label">お名前<span class="required"></span></label>
-            <input type="text" id="name" name="entry.2005620554" class="contact-form__input" required>
-          </div>
-          <div class="contact-form__group">
-            <label for="email" class="contact-form__label">E-mailアドレス <span class="required"></span></label>
-            <input type="email" id="email" name="entry.1045781291" class="contact-form__input" required>
-          </div>
-          <div class="contact-form__group">
-            <label for="message" class="contact-form__label">お問い合わせ内容<span class="required"></span></label>
-            <textarea id="message" name="entry.839337160" class="contact-form__textarea" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn--submit">submit</button>
-        </form>
-      </div>
-    </section>
+      
+ <form class="c-form" action="#" method="post">
+    <label for="name">お名前</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="kana">ふりがな</label>
+    <input type="text" id="kana" name="kana">
+
+    <label for="email">Emailアドレス</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">お問い合わせ内容</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">submit</button>
+  </form>
+</section>
 <script>
 (() => {
   const btn  = document.querySelector('.back-to-top');
@@ -256,10 +256,10 @@
 <a href="#top" class="back-to-top" aria-label="ページ先頭へ戻る">
   <img src="assets/imgs/owl-button.png" alt="" width="48" height="48" decoding="async">
 </a>
-</body>
+
   <footer>       
     <p>&copy; Kao 2025</p>
   </footer>
 
-
+</body>
 </html>
