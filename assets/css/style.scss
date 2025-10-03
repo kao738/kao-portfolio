@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /* ===== variables ===== */
 $brand: #245e62;
 $accent: #d6bf5e;
@@ -87,7 +89,6 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
  
 } */
 
-@use "sass:color";
 
 /* ===== header ===== */
 .site-header {
@@ -225,7 +226,10 @@ html { scroll-behavior: smooth; } /* なめらかスクロール */
     max-width: none;
     }
   }
+
+
 }
+
   /* ===== animation ===== */
 .animate-title {
   transform: scale(5);
